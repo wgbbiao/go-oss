@@ -26,8 +26,6 @@ func main() {
 	conf := new(Config)
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
-		return
-	} else {
 		out, err := v2.Marshal(conf)
 		if err != nil {
 			fmt.Printf("err: %v\n", err)
@@ -39,6 +37,7 @@ func main() {
 			fmt.Printf("err: %v\n", err)
 			return
 		}
+		return
 	}
 	if err := v2.Unmarshal(data, conf); err != nil {
 		fmt.Printf("err: %v\n", err)
